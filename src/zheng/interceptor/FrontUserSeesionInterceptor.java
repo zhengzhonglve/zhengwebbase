@@ -65,7 +65,7 @@ public class FrontUserSeesionInterceptor implements Interceptor {
 		int index = request.getContextPath().length() + 1;
 		String uri = request.getRequestURI().substring(index);
 		if (null == user) {
-			Map<String, Object> parameterMap = request.getParameterMap();
+			Map<String, String[]> parameterMap = request.getParameterMap();
 			StringBuffer condition = new StringBuffer("");
 			if (parameterMap != null) {
 				Iterator iterator = parameterMap.keySet().iterator();
